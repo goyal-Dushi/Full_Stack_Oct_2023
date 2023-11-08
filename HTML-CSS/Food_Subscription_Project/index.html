@@ -4,50 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>First Web Page</title>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
 
     <!-- This the header section -->
     <header>
-        <nav>
+        <nav class="nav--container">
             <ul>
-                <li><a href="#1">features</a></li>
-                <li><a href="#2">details</a></li>
-                <li><a href="#3">reviews</a></li>
-                <li><a href="#4">plans</a></li>
-                <li><a href="#5">contact us</a></li>
+                <li class="nc__listitem"><a href="#1">features</a></li>
+                <li class="nc__listitem"><a href="#2">details</a></li>
+                <li class="nc__listitem"><a href="#3">reviews</a></li>
+                <li class="nc__listitem"><a href="#4">plans</a></li>
+                <li class="nc__listitem"><a href="#5">contact us</a></li>
             </ul>
         </nav>
-        <div class="header-overlay">
-            <div class="header-cont">
+        <div class="header">
+            <div class="header--container">
                 <h1>Meal Plans.
                     <br />
                     For <span> Everyone </span>
                 </h1>
-                <div class="btn-cont">
-                    <a href="">Book Now</a>
-                    <a href="">Show me more</a>
+                <div class="header__actions">
+                    <a class="ha__btn ha__btn--filled" href="#">Book Now</a>
+                    <a class="ha__btn ha__btn--outlined" href="#">Show me more</a>
                 </div>
-
             </div>
         </div>
     </header>
     <main>
         <!-- This is the features section -->
-        <section>
-            <h2> AWESOME FEATURES </h2>
-            <div class="card-container">
-                <div class="card">
+        <section class="features">
+            <h2 class="fs__heading"> AWESOME FEATURES </h2>
+            <div class="fs__container">
+                <div class="fs__card">
                     <img src="" alt="calendar">
                     <h4> 365 DAYS/YEAR </h4>
                     <p> Never cook again! We really mean that. </p>
                 </div>
-                <div class="card">
+                <div class="fs__card">
                     <img src="" alt="calendar">
                     <h4> 30 MINUTES OR FREE </h4>
                     <p> You're only twenty minutes away from your delicious and super healthy meals delivered right to your home. </p>
                 </div>
-                <div class="card">
+                <div class="fs__card">
                     <img src="" alt="calendar">
                     <h4> 100% ORGANIC </h4>
                     <p> All our vegetables are fresh, organic and local. </p>
@@ -56,138 +56,137 @@
         </section>
 
          <!-- This is the steps to follow section -->
-        <section>
-            <h2> STEPS TO FOLLOW </h2>
-            <div class="steps-container">
-                <div class="row">
-                    <div class="col">
+        <section class="steps">
+            <h2 class="steps__heading"> STEPS TO FOLLOW </h2>
+            <div class="steps__container">
+                    <div class="steps__imgcol">
                         <img src="./assets/images/breakfast_with_beries_&_mint.png" alt="steps-img" />
                     </div>
-                    <div class="col">
-                        <div class="step">
-                            <p><span class="number">1</span> Choose the subscription plan that best fits your needs and sign up today</p>
-                        </div>
-                        <div class="step">
-                            <p><span class="number">2</span> Order your delicious meal using our mobile app or website. Or you can even call </p>
-                        </div>
-                        <div class="step">
-                            <p><span class="number">3</span> Enjoy your meal after less than 20 minutes. See you next time! </p>
+                    <div class="steps__col">
+                        <div class="steps__list">
+                            <div class="steps__step">
+                                <p><span class="steps__number">1</span> Choose the subscription plan that best fits your needs and sign up today</p>
+                            </div>
+                            <div class="steps__step">
+                                <p><span class="steps__number">2</span> Order your delicious meal using our mobile app or website. Or you can even call </p>
+                            </div>
+                            <div class="steps__step">
+                                <p><span class="steps__number">3</span> Enjoy your meal after less than 20 minutes. See you next time! </p>
+                            </div>
                         </div>
                     </div>
-                </div>
             </div>
         </section>
 
          <!-- This is the review section -->
-        <section>
-            <img alt="customer image" src="./assets/images/customer.png"/> 
-            <div class="reviews-container">
-                <div class="review-card">
-                    <img src="" alt="" class="customer-img">
-                    <h5 class="customer-name"> DAVID SMITH </h5>
-                    <p class="customer-review"> Lorem Ipsum </p>
-                    <div class="rating-container">
-                        <span class="star"> * </span>
+        <section class="review"> 
+            <div class="review__container">
+                <div class="review__card">
+                    <img src="./assets/images/customer.png" alt="customer-img" class="customer-img">
+                    <h5> DAVID SMITH </h5>
+                    <p> Lorem Ipsum </p>
+                    <div class="review__rating">
+                        <span class="review__star"> * </span>
                     </div>
                 </div>
-                <div class="review-card">
-                    <img src="./assets/images/customer.png" alt="" class="customer-img">
-                    <h5 class="customer-name"> DAVID SMITH </h5>
-                    <p class="customer-review"> Lorem Ipsum </p>
-                    <div class="rating-container">
-                        <span class="star"> * </span>
+                <div class="review__card">
+                    <img src="./assets/images/customer.png" alt="customer-img" class="customer-img">
+                    <h5> DAVID SMITH </h5>
+                    <p> Lorem Ipsum </p>
+                    <div class="review__rating">
+                        <span class="review__star"> * </span>
                     </div>
                 </div>
-                <div class="review-card">
-                    <img src="./assets/images/customer.png" alt="" class="customer-img">
-                    <h5 class="customer-name"> DAVID SMITH </h5>
-                    <p class="customer-review"> Lorem Ipsum </p>
-                    <div class="rating-container">
-                        <span class="star"> * </span>
+                <div class="review__card">
+                    <img src="./assets/images/customer.png" alt="customer-img" class="customer-img">
+                    <h5> DAVID SMITH </h5>
+                    <p> Lorem Ipsum </p>
+                    <div class="review__rating">
+                        <span class="review__star"> * </span>
                     </div>
                 </div>
             </div>
         </section>
 
          <!-- This the pricing section -->
-        <section>
+        <section class="pricing">
             <h2>START EATING HEALTHY TODAY</h2>
-            <div class="pricing-container">
-                <div class="package-card">
-                <h5 class="package-type">PREMIUM</h5>
-                <p class="price"><span>$399</span>/month</p>
+            <div class="pricing__container">
+                <div class="pricing__card">
+                <h5>PREMIUM</h5>
+                <p class="pricing__price"><span>$399</span>/month</p>
                 <hr>
-                <ul>
+                <ul class="pricing__list">
                     <li>1 meal every day</li>
                     <li>Order 24/7</li>
                     <li>Access to newest creations</li>
                     <li>Free delivery</li>
                 </ul>
                 <hr/>
-                <button type="button" class="action-btn">I'm hungry</button>
+                <button type="button" class="pricing__btn">I'm hungry</button>
                 </div>
-                <div class="package-card">
-                    <h5 class="package-type">PREMIUM</h5>
-                    <p class="price"><span>$399</span>/month</p>
+                <div class="pricing__card">
+                    <h5>PREMIUM</h5>
+                    <p class="pricing__price"><span>$399</span>/month</p>
                     <hr>
-                    <ul>
+                    <ul class="pricing__list">
                         <li>1 meal every day</li>
                         <li>Order 24/7</li>
                         <li>Access to newest creations</li>
                         <li>Free delivery</li>
                     </ul>
                     <hr/>
-                <button type="button" class="action-btn">I'm hungry</button>
-                </div>
-                    <div class="package-card">
-                        <h5 class="package-type">PREMIUM</h5>
-                        <p class="price"><span>$399</span>/month</p>
+                    <button type="button" class="pricing__btn">I'm hungry</button>
+                    </div>
+                    <div class="pricing__card">
+                        <h5>PREMIUM</h5>
+                        <p class="pricing__price"><span>$399</span>/month</p>
                         <hr>
-                        <ul>
+                        <ul class="pricing__list">
                             <li>1 meal every day</li>
                             <li>Order 24/7</li>
                             <li>Access to newest creations</li>
                             <li>Free delivery</li>
                         </ul>
                         <hr/>
-                <button type="button" class="action-btn">I'm hungry</button>
-                    </div>
+                        <button type="button" class="pricing__btn">I'm hungry</button>
+                        </div>
             </div>
         </section>
 
          <!-- This the contact us section -->
-        <section>
+        <section class="contact">
             <h2>Contact us</h2>
-            <div class="footer-container">
-                <div class="col img-col">
+            <div class="contact__container">
+                <div class="contact__img contact__img--col">
                     <img src="./assets/images/avacado.gif" alt="avocado_gif" height="400" width="400" />
                 </div>
-                <div class="col form-col">
+                <div class="contact__form contact__form--col">
                     <form action="#">
-                        <div class="input-group">
+                        <div class="contact__input">
                             <label for="name">Name</label>
                             <input id="name" name="name" type="text">
                         </div>
-                        <div class="input-group">
+                        <div class="contact__input">
                             <label for="email">Email</label>
                             <input type="email" name="email" id="email" />
                         </div>
-                        <div class="input-group">
+                        <div class="contact__input">
                             <label for="find">How did you find us?</label>
                             <select name="find" id="find">
                                 <option value="friedns">Friends</option>
                             </select>
                         </div>
-                        <div class="input-group">
+                        <div class="contact__input">
                             <label for="message"> Drop us a line </label>
                             <input type="textarea" row="3" col="30" placeholder="Your Message" name="message" id="message" />
 
                         </div>
-                        <div class="input-group">
+                        <div class="contact__input">
                             <input type="checkbox" name="terms" id="terms">
                             <label for="terms"> I have read and agree with all the Privacy Policy and Terms Conditions </label>
                         </div>
-                        <input type="submit" class="submit-btn" title="SEND MESSAGE" />
+                        <input type="submit" class="contact__submit" title="SEND MESSAGE" />
                     </form>
                 </div>
             </div>
@@ -196,13 +195,13 @@
 
      <!-- This the footer section -->
     <footer>
-        <div class="media-container">
-            <div class="links-section">
-                <div class="link"><a href="#"> About us </a></div>
+        <div class="footer__container">
+            <div class="footer__links">
+                <div class="footer__link"><a href="#"> About us </a></div>
                 <div class="link"><a href="#"> ios App </a></div>
                 <div class="link"><a href="#"> Android App </a></div>
             </div>
-            <div class="media-section">
+            <div class="footer__media">
                 <div class="media-icon"><a href="#"><img src="#" alt="fb"></a></div>
                 <div class="media-icon"><a href="#"><img src="#" alt="twitter"></a></div>
                 <div class="media-icon"><a href="#"><img src="#" alt="insta"></a></div>
