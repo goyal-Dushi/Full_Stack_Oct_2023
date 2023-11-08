@@ -1,0 +1,174 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary: rgb(184, 57, 57);
+    --section-heading: rgb(128, 128, 128);
+}
+
+body{
+    font-family: sans-serif;
+}
+
+section{
+    padding: 50px;
+}
+
+
+/* section headings */
+.fs-heading,
+.ss-heading {
+    color: var(--section-heading);
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 2.4rem;
+}
+
+.fs-heading::after,
+.ss-heading::after {
+    content: '';
+    border-bottom: 2px solid var(--primary);
+    margin: 20px auto;
+    display: block;
+    width: 4%;
+    text-align: center;
+}
+
+/* header */
+header{
+    background: url('../assets/images/foodies_pizza_ready_for_baking.png') center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    position: relative;
+}
+
+.nav-container{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.nc-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 40%;
+    list-style-type: none;
+}
+
+.nc-list-item a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.header-overlay{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 20px;
+    left: 30%;
+}
+
+.hero-container h1{
+    font-size: 50px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.hero-container h1>span{
+    color: var(--primary);
+}
+
+.hero-actions{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 2.5rem;
+}
+
+.ha-btn{
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    border-radius: 40px;
+    padding: 20px 40px;
+}
+
+.ha-btn__filled{
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.ha-btn__outlined{
+    background-color: transparent;
+}
+
+/* Features section */
+.fs-card-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.fs-card{
+    box-shadow: 2px 2px 28px 5px lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: var(--section-heading);
+    padding: 20px;
+    width: 18%;
+    height: 250px;
+}
+
+/* Steps to follow section */
+.steps-section{
+    background-color: #e5e5e5;
+}
+
+.steps-container{
+    margin: 30px auto;
+    padding: 0px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sc-steps-col{
+    display: flex;
+    align-items: center;
+}
+
+.sc-step{
+    font-size: 20px;
+    color: gray;
+    display: flex;
+    align-items: center;
+    margin: 10% 0px;
+}
+
+.sc-step-number{
+    border: 1px solid var(--primary);
+    padding: 20px 30px;
+    font-size: 30px;
+    color: var(--primary);
+    border-radius: 100%;
+}
+
+/* Review Section */
