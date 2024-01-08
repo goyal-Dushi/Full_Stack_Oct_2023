@@ -17,8 +17,9 @@ const handleIntersection = (element) => {
 };
 
 const options = {
+   // root: document.querySelectorAll('section'),
     threshold: 0.5,
-    rootMargin: '200px',
+    rootMargin: '30px',
 }
 
 const intersectionObserver = new IntersectionObserverUtil(handleIntersection, options);
