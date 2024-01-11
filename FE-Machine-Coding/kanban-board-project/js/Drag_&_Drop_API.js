@@ -9,12 +9,12 @@
  *    - drag end
  * 
  *  drag and drop events:
- *   1. dragstart
- *   2. dragend
- *   3. drop
- *   4. dragover
- *   5. dragenter
- *   6. dragleave
+ *       1. dragstart: fires when the elements start dragging.
+ *       2. dragend: fires when the element drag operation is done.
+ *       3. dragover: fires repeatedly while the dragged element is being dragged over a valid target area.
+ *       4. dragenter: fires when the dragged element enters a valid drop target area.
+ *       5. dragleave: fires when the drag element leaves a valid drop area.
+ *       6. drop: fires when the dragged element is released over a valid drop target. 
  * 
  *  How to implement it?
  *   1. set the HTML Structure
@@ -25,7 +25,7 @@
  *   3. attach event on the draggable element
  * 
  *      elem.addEventListener('drag and drop event name', methods)
- * 
+ *       event.dataTransfer.setData("text/plain", event.target.id)
  * 
  * 
  */
