@@ -1,0 +1,14 @@
+.heading {
+    background-color: pink;
+}
+
+.container {
+    color:rgb(18, 18, 16);
+    text-align:  center;
+}
+
+.body_text {
+  padding: 2em;
+  margin: 2em 0;
+  border: 1px solid #000;
+}
