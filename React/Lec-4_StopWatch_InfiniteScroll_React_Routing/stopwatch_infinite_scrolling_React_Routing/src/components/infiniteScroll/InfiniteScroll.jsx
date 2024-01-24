@@ -1,7 +1,7 @@
 
 //import './infiniteScroll.css';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import styleObj from './style.module.css' ;
 import { useFetchData } from '../hooks/useFetchData';
 
@@ -22,43 +22,80 @@ const InfinteScroll = () =>{
                 - get the paginated data only (show only next 10 set of data)
                 - implemented the pagination
                 - custom hook - reusing the logic
-       2. Intersection Observer -> last elment -> load the second set of data elements.
+        2. Infinite Scrolling: 
+            2.1. create the ref for the last element in the list
+            2.2. Use Intersection Observer API.
+            2.3. When the last element will come in the viewport load the next set of data.
     */}
 
     const [pageNum, setPageNum] = useState(1);
 
     const { data , error, isLoading } = useFetchData(pageNum);
 
+    const observer = useRef(null);
+
+    const getLastElementRef = (elem) => {
+       console.log(elem);
+
+       if(!elem || isLoading) return;
+
+       if(observer.current) {
+        observer.current.disconnect();
+       }
+
+       observer.current = new IntersectionObserver((entries)=>{
+        console.log(entries);
+
+        // const [entry] = entries; // [entry] = entires[0]
+        // console.log(entry);
+
+        if(entries[0].isIntersecting) { // if isIntersecting
+            setPageNum((prevPage) => prevPage+1);
+        }
+
+       },
+       {threshold: 1}
+       );
+
+       observer.current.observe(elem);
+    }
+
     return(
         <>
           <h1 className={styleObj.heading}>Machine coding problem: Infinite Scrolling/Lazy loading </h1>
 
           <div className={styleObj.container}>
-            {
-             isLoading && (<div>Loading...</div>)
-            // 
-            // data && (data.map((item)=>{
-            //     return <div className={styleObj.body_text}>{item}</div>
-            // })
-            
-            }
 
             {
                 error && (<div>{error.message}</div>)
             }
 
             {
-                data && data.map((item)=>{
+
+                data && data.map((item, index)=>{
+          
+                  if(data.length === index + 1) { //10 === 0+1
+                    return <div ref={(elem)=>{getLastElementRef(elem)}} className={styleObj.body_text} key={item.id}>{item.body}</div>
+                  } else {
                     return <div className={styleObj.body_text} key={item.id}>{item.body}</div>
+                  }
                 })
+                // data && data.map((item)=>{
+                //     return <div className={styleObj.body_text} key={item.id}>{item.body}</div>
+                // })
 
             }
-            <div>{pageNum}</div>
+
+            {
+             isLoading && (<div className={styleObj.loader}></div>)
+            }
+
+            {/* <div>{pageNum}</div>
             <button onClick={
                     ()=>{
                         setPageNum(pageNum + 1);
                     }
-            }>next</button>
+            }>next</button> */}
           </div>
         </>
     )
