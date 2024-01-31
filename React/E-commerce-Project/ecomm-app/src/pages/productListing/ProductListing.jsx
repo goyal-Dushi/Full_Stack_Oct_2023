@@ -3,30 +3,36 @@ import useFetchData from '../../hooks/useFetchData';
 import Product from '../../components/product/product';
 import Loader from '../../components/loader';
 
-const ProductListing = () => {
+import './productListing.css';
 
-    // const {userId, postId}  = useParams();
+const ProductListing = () => {
 
     const { categoryName } = useParams();
 
-    console.log(categoryName);
+    const url = categoryName
+    ? `https://fakestoreapi.com/products/category/${categoryName}`
+    : `https://fakestoreapi.com/products`;
 
-    const {data: products, error, isLoading} = useFetchData(`https://fakestoreapi.com/products/category/${categoryName}`, []);
+    const {data: products, error, isLoading} = useFetchData(url, []);
 
-
-
-    return(
-        <>
-        {isLoading && <Loader />}
-        {
-            products && products.map((product)=>{
-                return(
-                    <Product product={product}/>
+    return (
+        <div className="container">
+            {
+                isLoading ? (
+                    <Loader />
+                ): (
+                    <>
+                        <div className="product-list">
+                            {
+                                products && products.map((product)=>{
+                                    return <Product key={product.id} product={product}/>   
+                                })
+                            }
+                        </div>
+                    </>
                 )
-            })
-        }
-           
-        </>
+            }
+        </div>
     )
 
 }
